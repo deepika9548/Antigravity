@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepika Pal | Software Developer & DSA Enthusiast | BCA Portfolio</title>
+  <meta name="description" content="Portfolio of Deepika Pal - BCA student passionate about software development, C, Core Java, Data Structures, and algorithmic problem solving. Ready for campus placements.">
+  <meta name="keywords" content="Deepika Pal, BCA Student, Software Developer, Java Developer, C Programmer, Data Structures and Algorithms, Campus Placement Portfolio">
+  <meta name="author" content="Deepika Pal">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons for clean visuals -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas for interactive ambient particles -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">Deepika Pal</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#dsa-lab" class="nav-link">Interactive DSA Lab</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#coding-profiles" class="nav-link">Coding Profiles</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="resume-trigger-btn" class="btn btn-outline" title="Preview Resume">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Resume</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="status-pill" id="status-pill">
+            <span class="pulse-dot"></span>
+            <span>Open to Campus Placements & Internships</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Deepika Pal</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">I build logic as a </span>
+            <span class="typewriter-text" id="typewriter-text"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            BCA student dedicated to software engineering, algorithmic efficiency, and object-oriented design. Proficient in <strong>C</strong>, <strong>Core Java</strong>, and <strong>Data Structures & Algorithms</strong> with an insatiable hunger for solving complex engineering problems.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#dsa-lab" class="btn btn-glass">
+              <i class="fa-solid fa-flask-vial"></i>
+              <span>Test DSA Lab</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Let's Talk</span>
+            </a>
+          </div>
+
+          <div class="quick-tech-stack">
+            <span class="stack-label">Primary Stack:</span>
+            <div class="stack-pills">
+              <span class="tech-tag"><i class="fa-solid fa-code"></i> C Language</span>
+              <span class="tech-tag"><i class="fa-brands fa-java"></i> Core Java</span>
+              <span class="tech-tag"><i class="fa-solid fa-diagram-project"></i> DSA</span>
+              <span class="tech-tag"><i class="fa-solid fa-cubes"></i> OOP Concepts</span>
+              <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git/GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Terminal Card -->
+        <div class="hero-visual">
+          <div class="code-terminal-card glass-panel">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">deepika_pal.java — JVM Ready</div>
+              <button id="run-code-btn" class="run-button" title="Run Code">
+                <i class="fa-solid fa-play"></i> Run
+              </button>
+            </div>
+            <div class="terminal-body">
+              <pre><code><span class="code-keyword">public class</span> <span class="code-class">DeepikaPal</span> {
+  <span class="code-keyword">public static void</span> <span class="code-func">main</span>(String[] args) {
+    Developer deepika = <span class="code-keyword">new</span> Developer();
+    deepika.setName(<span class="code-str">"Deepika Pal"</span>);
+    deepika.setDegree(<span class="code-str">"BCA"</span>);
+    deepika.setCoreSkills(<span class="code-keyword">new</span> String[]{
+      <span class="code-str">"C"</span>, <span class="code-str">"Java"</span>, <span class="code-str">"DSA"</span>, <span class="code-str">"OOPs"</span>
+    });
+
+    <span class="code-comment">// Ready to bring value to your engineering team!</span>
+    deepika.solveProblems(Complexity.<span class="code-constant">OPTIMAL</span>);
+    deepika.openForPlacements(<span class="code-keyword">true</span>);
+  }
+}</code></pre>
+            </div>
+            <div class="terminal-output" id="terminal-output">
+              <span class="output-prompt">$ java DeepikaPal</span>
+              <span class="output-text" id="terminal-output-text">Compiled successfully. Ready to build robust systems!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Counter Bar -->
+    <section class="stats-bar">
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number" data-target="250">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">DSA Problems Solved</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Core OOP & Logic Mastery</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Practical Projects Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Passion for Clean Code</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Get to know me</span>
+          <h2 class="section-title">About <span class="gradient-text">Deepika Pal</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel main-about">
+            <div class="about-icon-header">
+              <div class="icon-avatar">
+                <i class="fa-solid fa-user-graduate"></i>
+              </div>
+              <div>
+                <h3>BCA Computer Science Undergrad</h3>
+                <p class="subtitle">Focus: Algorithmic Logic & Java Architecture</p>
+              </div>
+            </div>
+            <p>
+              I am an ambitious <strong>Bachelor of Computer Applications (BCA)</strong> student with a profound interest in computer programming and software development. My journey started with the fundamentals in <strong>C</strong>, understanding memory layout, pointers, and manual resource control, which gave me a solid grasp of how computer hardware and operating systems operate.
+            </p>
+            <p>
+              Transitioning to <strong>Java</strong> empowered me to embrace modern software development practices — Object-Oriented Principles (Abstraction, Encapsulation, Polymorphism, Inheritance), robust exception handling, and clean code architecture.
+            </p>
+            <p>
+              I spend my time dissecting <strong>Data Structures and Algorithms</strong> to write solutions that don't just work, but run within optimal Time and Space complexity bounds. I am eager to contribute fresh energy, rapid learning capability, and disciplined coding practices to a forward-thinking engineering team.
+            </p>
+
+            <div class="highlights-row">
+              <div class="highlight-box">
+                <i class="fa-solid fa-bullseye"></i>
+                <div>
+                  <strong>Target Role</strong>
+                  <span>Software Engineer / Java Developer Trainee</span>
+                </div>
+              </div>
+              <div class="highlight-box">
+                <i class="fa-solid fa-brain"></i>
+                <div>
+                  <strong>Core Strength</strong>
+                  <span>Analytical Thinking & Problem Solving</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-side-cards">
+            <div class="info-card glass-panel">
+              <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h4>Academic Foundation</h4>
+              <p><strong>Bachelor of Computer Applications (BCA)</strong></p>
+              <ul class="academic-list">
+                <li><i class="fa-solid fa-check"></i> Data Structures & Algorithms</li>
+                <li><i class="fa-solid fa-check"></i> Object-Oriented Programming with Java</li>
+                <li><i class="fa-solid fa-check"></i> Relational Database Management (DBMS)</li>
+                <li><i class="fa-solid fa-check"></i> Operating Systems & Computer Networks</li>
+              </ul>
+            </div>
+
+            <div class="info-card glass-panel">
+              <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+              <h4>Why Hire Me?</h4>
+              <p class="card-text">
+                I combine strong computational fundamentals with persistent dedication. I take pride in understanding problems from root level up, adapting swiftly to new tech stacks, and writing readable, testable code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Capabilities</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">A balanced toolkit rooted in strong computer science fundamentals</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="category-icon language-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-meter-item">
+                <div class="meter-info">
+                  <span class="skill-name"><i class="fa-brands fa-java"></i> Java (Core & OOPs)</span>
+                  <span class="skill-percentage">Advanced</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 88%;"></div>
+                </div>
+                <span class="meter-detail">Classes, Inheritance, Polymorphism, Collections Framework, Exception Handling</span>
+              </div>
+
+              <div class="skill-meter-item">
+                <div class="meter-info">
+                  <span class="skill-name"><i class="fa-solid fa-c"></i> C Programming</span>
+                  <span class="skill-percentage">Proficient</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 85%;"></div>
+                </div>
+                <span class="meter-detail">Pointers, Memory Allocation (malloc/free), Structs, File Handling, Preprocessors</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Structures & Algorithms -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="category-icon dsa-icon"><i class="fa-solid fa-sitemap"></i></div>
+              <h3>Data Structures & Algorithms</h3>
+            </div>
+            <div class="skills-list">
+              <div class="tag-cloud">
+                <span class="skill-badge primary"><i class="fa-solid fa-layer-group"></i> Arrays & Matrices</span>
+                <span class="skill-badge primary"><i class="fa-solid fa-link"></i> Linked Lists (Singly & Doubly)</span>
+                <span class="skill-badge primary"><i class="fa-solid fa-bars-staggered"></i> Stacks & Queues</span>
+                <span class="skill-badge primary"><i class="fa-solid fa-network-wired"></i> Trees & Binary Search Trees</span>
+                <span class="skill-badge primary"><i class="fa-solid fa-magnifying-glass"></i> Binary & Linear Search</span>
+                <span class="skill-badge primary"><i class="fa-solid fa-arrow-down-a-z"></i> Quick / Merge / Bubble Sort</span>
+                <span class="skill-badge primary"><i class="fa-solid fa-repeat"></i> Recursion & Backtracking</span>
+                <span class="skill-badge primary"><i class="fa-solid fa-stopwatch"></i> Big-O Time & Space Analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core CS Fundamentals -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="category-icon cs-icon"><i class="fa-solid fa-microchip"></i></div>
+              <h3>Core CS Subjects</h3>
+            </div>
+            <div class="skills-list">
+              <div class="concept-boxes">
+                <div class="concept-item">
+                  <i class="fa-solid fa-cubes"></i>
+                  <div>
+                    <strong>Object-Oriented Programming (OOP)</strong>
+                    <p>Encapsulation, Data Hiding, Dynamic Binding & Interface segregation.</p>
+                  </div>
+                </div>
+                <div class="concept-item">
+                  <i class="fa-solid fa-database"></i>
+                  <div>
+                    <strong>Database Management (DBMS)</strong>
+                    <p>SQL Queries, Normalization, ACID Properties, ER Modeling.</p>
+                  </div>
+                </div>
+                <div class="concept-item">
+                  <i class="fa-solid fa-server"></i>
+                  <div>
+                    <strong>Operating Systems Basics</strong>
+                    <p>Processes, Threads, Concurrency, Memory Management, Deadlocks.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Developer Tools & Workflow -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="category-icon tools-icon"><i class="fa-solid fa-toolbox"></i></div>
+              <h3>Tools & Development Environment</h3>
+            </div>
+            <div class="skills-list">
+              <div class="tools-grid">
+                <div class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+                <div class="tool-chip"><i class="fa-brands fa-github"></i> GitHub</div>
+                <div class="tool-chip"><i class="fa-solid fa-terminal"></i> VS Code</div>
+                <div class="tool-chip"><i class="fa-solid fa-laptop-code"></i> IntelliJ IDEA</div>
+                <div class="tool-chip"><i class="fa-solid fa-gears"></i> GCC / GDB</div>
+                <div class="tool-chip"><i class="fa-solid fa-database"></i> MySQL / SQLite</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive DSA Lab (Recruiter "WOW" Feature) -->
+    <section class="section dsa-lab-section" id="dsa-lab">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Live Interactive Showcase</span>
+          <h2 class="section-title">Interactive <span class="gradient-text">DSA Lab</span></h2>
+          <p class="section-subtitle">Recruiters can test live algorithm execution right on this page!</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="dsa-workbench glass-panel">
+          <!-- Lab Navigation Tabs -->
+          <div class="lab-tabs">
+            <button class="lab-tab-btn active" data-tab="sorting">
+              <i class="fa-solid fa-arrow-down-wide-short"></i> Sorting Visualizer
+            </button>
+            <button class="lab-tab-btn" data-tab="stack">
+              <i class="fa-solid fa-layer-group"></i> Stack (LIFO) Operations
+            </button>
+          </div>
+
+          <!-- Tab 1: Sorting Visualizer -->
+          <div class="lab-tab-content active" id="tab-sorting">
+            <div class="lab-controls">
+              <div class="control-group">
+                <button id="btn-generate-array" class="btn btn-sm btn-secondary">
+                  <i class="fa-solid fa-rotate"></i> New Array
+                </button>
+                <button id="btn-bubble-sort" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-play"></i> Run Bubble Sort
+                </button>
+                <button id="btn-selection-sort" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-bolt"></i> Run Selection Sort
+                </button>
+              </div>
+              <div class="lab-status-display" id="sort-status-display">
+                Status: Ready. Click an algorithm to watch step-by-step swaps.
+              </div>
+            </div>
+
+            <div class="visualizer-container" id="visualizer-bars">
+              <!-- Dynamically populated bars -->
+            </div>
+
+            <div class="algorithm-complexity-card">
+              <div class="comp-col">
+                <span class="comp-label">Algorithm:</span>
+                <span class="comp-val" id="algo-name-display">Bubble Sort</span>
+              </div>
+              <div class="comp-col">
+                <span class="comp-label">Worst Case Time:</span>
+                <span class="comp-val code-font text-highlight" id="algo-time-display">O(N²)</span>
+              </div>
+              <div class="comp-col">
+                <span class="comp-label">Auxiliary Space:</span>
+                <span class="comp-val code-font text-highlight" id="algo-space-display">O(1)</span>
+              </div>
+              <div class="comp-col">
+                <span class="comp-label">Comparisons Made:</span>
+                <span class="comp-val code-font" id="algo-comparisons">0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Stack Visualizer -->
+          <div class="lab-tab-content" id="tab-stack">
+            <div class="lab-controls">
+              <div class="control-group">
+                <input type="text" id="stack-input" placeholder="e.g. 42, Java, C" maxlength="8" class="custom-input">
+                <button id="btn-stack-push" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-arrow-down"></i> Push (O(1))
+                </button>
+                <button id="btn-stack-pop" class="btn btn-sm btn-secondary">
+                  <i class="fa-solid fa-arrow-up"></i> Pop (O(1))
+                </button>
+                <button id="btn-stack-clear" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-trash-can"></i> Clear
+                </button>
+              </div>
+              <div class="lab-status-display" id="stack-status-display">
+                LIFO Stack ready. Top of Stack is highlighted.
+              </div>
+            </div>
+
+            <div class="stack-visualizer-area">
+              <div class="stack-container-box" id="stack-box">
+                <!-- Stack nodes placed here -->
+              </div>
+              <div class="stack-info-side">
+                <div class="info-badge">
+                  <strong>Stack State:</strong>
+                  <span id="stack-size-display">Size: 3 / Max 6</span>
+                </div>
+                <div class="info-badge">
+                  <strong>Top Pointer:</strong>
+                  <span id="stack-top-display">Index 2</span>
+                </div>
+                <p class="stack-desc">
+                  Simulating a dynamic contiguous Stack implemented with manual pointer indexing as used in <strong>C & Java</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Practical Implementations</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world applications built with C, Java, and Data Structures</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Patient Triage Management in C -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <div class="project-badge c-badge">
+                <i class="fa-solid fa-code"></i> C Language & DSA
+              </div>
+              <div class="project-links">
+                <a href="#projects" class="icon-link" title="GitHub Source" onclick="alert('Demo Repository for Deepika Pal. Add your GitHub project link here!')"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Smart Hospital Patient Triage System</h3>
+              <p class="project-summary">
+                A high-performance command-line emergency triage management system engineered in <strong>C</strong> using a <strong>Priority Queue</strong> (Min-Heap) and <strong>Doubly Linked Lists</strong> for optimal patient admission prioritization.
+              </p>
+
+              <div class="dsa-used-box">
+                <strong><i class="fa-solid fa-microchip"></i> Key Concepts Applied:</strong>
+                <span>Priority Queues (Heap), Linked Lists, Dynamic Memory (`malloc`/`free`), File Persistence.</span>
+              </div>
+
+              <div class="project-features">
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Constant O(1) emergency patient lookups</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Memory leak prevention verified with valgrind</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> File I/O for saving patient discharge summaries</div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="tags-row">
+                <span class="tag">C</span>
+                <span class="tag">DSA</span>
+                <span class="tag">Memory Management</span>
+                <span class="tag">File I/O</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Banking & Transaction System in Java -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <div class="project-badge java-badge">
+                <i class="fa-brands fa-java"></i> Java & OOP
+              </div>
+              <div class="project-links">
+                <a href="#projects" class="icon-link" title="GitHub Source" onclick="alert('Demo Repository for Deepika Pal. Add your GitHub project link here!')"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Secure Core Java Banking Engine</h3>
+              <p class="project-summary">
+                A robust banking and transaction simulation built with <strong>Core Java</strong>. Implements all four pillars of <strong>OOP</strong>, multi-account hierarchy, user authentication, and thread-safe balance operations.
+              </p>
+
+              <div class="dsa-used-box">
+                <strong><i class="fa-solid fa-microchip"></i> Key Concepts Applied:</strong>
+                <span>Inheritance, Custom Exception Handling, Collections (HashMap & ArrayList), File Logging.</span>
+              </div>
+
+              <div class="project-features">
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Custom exceptions (e.g., `InsufficientFundsException`)</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Account hierarchy (Savings, Current, Fixed Deposit)</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Transaction history generation & audit logs</div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="tags-row">
+                <span class="tag">Java</span>
+                <span class="tag">OOP Design</span>
+                <span class="tag">Collections</span>
+                <span class="tag">Exception Handling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Algorithmic Pathfinding / Maze Solver -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <div class="project-badge algo-badge">
+                <i class="fa-solid fa-route"></i> Algorithms
+              </div>
+              <div class="project-links">
+                <a href="#projects" class="icon-link" title="GitHub Source" onclick="alert('Demo Repository for Deepika Pal. Add your GitHub project link here!')"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">2D Grid Maze Solver & Backtracker</h3>
+              <p class="project-summary">
+                An algorithmic simulation exploring <strong>Recursion, Backtracking</strong>, and <strong>Breadth-First Search (BFS)</strong> to compute the shortest guaranteed path through dynamic obstacles in a 2D matrix.
+              </p>
+
+              <div class="dsa-used-box">
+                <strong><i class="fa-solid fa-microchip"></i> Key Concepts Applied:</strong>
+                <span>Recursion, Backtracking, Queue-based BFS, 2D Arrays, Visited States Bitmasking.</span>
+              </div>
+
+              <div class="project-features">
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Guarantees optimal path discovery using BFS</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Backtracking visualization with step counter</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Modular OOP design for easy grid resizing</div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="tags-row">
+                <span class="tag">Java</span>
+                <span class="tag">BFS</span>
+                <span class="tag">Backtracking</span>
+                <span class="tag">Matrix</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Student Academic Tracker -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <div class="project-badge c-badge">
+                <i class="fa-solid fa-file-invoice"></i> Java / C CLI
+              </div>
+              <div class="project-links">
+                <a href="#projects" class="icon-link" title="GitHub Source" onclick="alert('Demo Repository for Deepika Pal. Add your GitHub project link here!')"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Student Performance & Grading System</h3>
+              <p class="project-summary">
+                A college administration utility for tracking BCA student enrollments, semester marks, and GPA rankings. Employs <strong>Binary Search</strong> for instantaneous roll-number lookups and <strong>Merge Sort</strong> for merit rank calculations.
+              </p>
+
+              <div class="dsa-used-box">
+                <strong><i class="fa-solid fa-microchip"></i> Key Concepts Applied:</strong>
+                <span>Binary Search O(log N), Merge Sort O(N log N), CSV/Binary File Persistence.</span>
+              </div>
+
+              <div class="project-features">
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Fast binary search lookup by roll number</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Generates printable grade cards & summaries</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Persistent file storage with zero data loss</div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="tags-row">
+                <span class="tag">Java/C</span>
+                <span class="tag">Binary Search</span>
+                <span class="tag">Sorting</span>
+                <span class="tag">Data Files</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coding Profiles & Placement Metrics -->
+    <section class="section coding-profiles-section" id="coding-profiles">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Credibility & Practice</span>
+          <h2 class="section-title">Coding <span class="gradient-text">Profiles</span></h2>
+          <p class="section-subtitle">Consistent problem solving across competitive coding platforms</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="profiles-grid">
+          <!-- LeetCode Card -->
+          <div class="profile-card glass-panel">
+            <div class="profile-brand">
+              <div class="platform-icon leetcode-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div>
+                <h4>LeetCode</h4>
+                <span class="handle">@deepikapal_dev</span>
+              </div>
+            </div>
+            <div class="profile-stats">
+              <div class="p-stat">
+                <span class="p-stat-number">200+</span>
+                <span class="p-stat-label">Solved</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-number">Top 25%</span>
+                <span class="p-stat-label">Consistency</span>
+              </div>
+            </div>
+            <p class="profile-note">Focus on Two Pointers, Linked Lists, Binary Trees, and Sorting algorithms.</p>
+            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              Visit LeetCode <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <!-- HackerRank Card -->
+          <div class="profile-card glass-panel">
+            <div class="profile-brand">
+              <div class="platform-icon hackerrank-icon">
+                <i class="fa-brands fa-hackerrank"></i>
+              </div>
+              <div>
+                <h4>HackerRank</h4>
+                <span class="handle">@deepika_pal</span>
+              </div>
+            </div>
+            <div class="profile-stats">
+              <div class="p-stat">
+                <span class="p-stat-number">5 ★</span>
+                <span class="p-stat-label">Java Badge</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-number">5 ★</span>
+                <span class="p-stat-label">C Language</span>
+              </div>
+            </div>
+            <p class="profile-note">Gold level proficiency badges in C and Java programming domains.</p>
+            <a href="https://hackerrank.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              Visit HackerRank <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <!-- GeeksforGeeks Card -->
+          <div class="profile-card glass-panel">
+            <div class="profile-brand">
+              <div class="platform-icon gfg-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div>
+                <h4>GeeksforGeeks</h4>
+                <span class="handle">@deepikapal_bca</span>
+              </div>
+            </div>
+            <div class="profile-stats">
+              <div class="p-stat">
+                <span class="p-stat-number">150+</span>
+                <span class="p-stat-label">POTD Solved</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-number">BCA</span>
+                <span class="p-stat-label">Campus Rank #1</span>
+              </div>
+            </div>
+            <p class="profile-note">Active practice on Problem of the Day and core data structure challenges.</p>
+            <a href="https://geeksforgeeks.org" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              Visit GFG <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <!-- GitHub Card -->
+          <div class="profile-card glass-panel">
+            <div class="profile-brand">
+              <div class="platform-icon github-icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div>
+                <h4>GitHub</h4>
+                <span class="handle">@deepika-pal</span>
+              </div>
+            </div>
+            <div class="profile-stats">
+              <div class="p-stat">
+                <span class="p-stat-number">10+</span>
+                <span class="p-stat-label">Repos</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-number">Daily</span>
+                <span class="p-stat-label">Git Commits</span>
+              </div>
+            </div>
+            <p class="profile-note">Version controlled repositories with clean README files and test scripts.</p>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              Visit GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Placement Reachout Section -->
+    <section class="section contact-section" id="contact">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Get in Touch</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-subtitle">Looking forward to interviews, technical discussions, and campus placement opportunities</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Details -->
+          <div class="contact-details glass-panel">
+            <h3>Ready to take the next step?</h3>
+            <p>
+              I am actively seeking software engineering trainee and junior developer roles where I can apply my <strong>C</strong>, <strong>Java</strong>, and <strong>DSA</strong> skills to solve meaningful real-world challenges.
+            </p>
+
+            <div class="contact-methods">
+              <div class="method-item">
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="method-label">Email Me</span>
+                  <a href="mailto:deepika.pal.dev@gmail.com" class="method-link">deepika.pal.dev@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div>
+                  <span class="method-label">LinkedIn</span>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="method-link">linkedin.com/in/deepika-pal</a>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="method-label">Location</span>
+                  <span class="method-text">India (Open to Relocation & Remote)</span>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div>
+                  <span class="method-label">Availability</span>
+                  <span class="method-text">Full-Time Campus Placement / Internship</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links-row">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="mailto:deepika.pal.dev@gmail.com" class="social-circle-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="contact-form-card glass-panel">
+            <h3>Send a Direct Message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Your Name / Recruiter Name</label>
+                <input type="text" id="contact-name" placeholder="e.g. John Doe / HR Team" required class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" placeholder="e.g. recruiter@company.com" required class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Opportunity / Subject</label>
+                <input type="text" id="contact-subject" placeholder="e.g. Placement Interview / Role Discussion" required class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" rows="4" placeholder="Hello Deepika, we liked your portfolio and would love to schedule a technical round..." required class="form-input"></textarea>
+              </div>
+
+              <button type="submit" id="submit-message-btn" class="btn btn-primary btn-block">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+            <div id="form-feedback" class="form-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Resume Modal -->
+  <div class="modal-overlay" id="resume-modal" aria-hidden="true">
+    <div class="modal-container glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-file-invoice text-highlight"></i>
+          <h3>Deepika Pal — Curriculum Vitae</h3>
+        </div>
+        <div class="modal-actions">
+          <button id="print-resume-btn" class="btn btn-sm btn-primary">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button id="close-modal-btn" class="btn-close" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body" id="printable-resume">
+        <div class="resume-sheet">
+          <!-- Resume Header -->
+          <div class="resume-header">
+            <div>
+              <h2 class="resume-name">DEEPIKA PAL</h2>
+              <p class="resume-role">BCA Student | Software Developer (Java, C & DSA)</p>
+            </div>
+            <div class="resume-contact-info">
+              <span><i class="fa-solid fa-envelope"></i> deepika.pal.dev@gmail.com</span>
+              <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/deepika-pal</span>
+              <span><i class="fa-brands fa-github"></i> github.com/deepika-pal</span>
+              <span><i class="fa-solid fa-location-dot"></i> India</span>
+            </div>
+          </div>
+
+          <hr class="resume-divider">
+
+          <!-- Career Objective -->
+          <div class="resume-section">
+            <h4 class="resume-sec-title">CAREER OBJECTIVE</h4>
+            <p>
+              Diligent BCA student with foundational expertise in C, Core Java, and Data Structures & Algorithms. Seeking an entry-level Software Developer / Graduate Engineer Trainee role to apply strong algorithmic logic, analytical problem solving, and object-oriented paradigms toward impactful enterprise solutions.
+            </p>
+          </div>
+
+          <!-- Education -->
+          <div class="resume-section">
+            <h4 class="resume-sec-title">EDUCATION</h4>
+            <div class="resume-item">
+              <div class="item-header">
+                <strong>Bachelor of Computer Applications (BCA)</strong>
+                <span class="item-date">2024 – Present</span>
+              </div>
+              <p class="item-sub">Key Coursework: Data Structures & Algorithms, Object-Oriented Programming (Java), C Programming, DBMS, Operating Systems.</p>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="resume-section">
+            <h4 class="resume-sec-title">TECHNICAL SKILLS</h4>
+            <p><strong>Languages:</strong> C, Core Java (OOP, Collections, Exception Handling, I/O)</p>
+            <p><strong>DSA Concepts:</strong> Arrays, Linked Lists, Stacks, Queues, Trees, Binary Search, Sorting Algorithms, Time & Space Complexity</p>
+            <p><strong>Databases & Tools:</strong> MySQL / Relational Databases, Git, GitHub, VS Code, IntelliJ IDEA</p>
+          </div>
+
+          <!-- Academic & Practical Projects -->
+          <div class="resume-section">
+            <h4 class="resume-sec-title">KEY PROJECTS</h4>
+
+            <div class="resume-item">
+              <div class="item-header">
+                <strong>Smart Hospital Patient Triage System | C & Data Structures</strong>
+              </div>
+              <ul>
+                <li>Implemented a Priority Queue and Doubly Linked List in C for emergency admissions.</li>
+                <li>Utilized dynamic memory allocation (`malloc`/`free`) with zero memory leaks.</li>
+                <li>Incorporated persistent file handling to archive patient discharge reports.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <div class="item-header">
+                <strong>Secure Core Java Banking Simulation Engine | Java & OOP</strong>
+              </div>
+              <ul>
+                <li>Architected full account lifecycle with encapsulation and inheritance patterns.</li>
+                <li>Handled runtime transaction exceptions (`InsufficientFundsException`).</li>
+                <li>Used Java Collections Framework (ArrayList, HashMap) to manage real-time transaction history.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <div class="item-header">
+                <strong>2D Grid Maze Solver & Backtracker | Java & Algorithms</strong>
+              </div>
+              <ul>
+                <li>Formulated pathfinding in 2D grids using BFS and recursive backtracking.</li>
+                <li>Optimized state traversal resulting in guaranteed shortest path verification.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Certifications & Practice -->
+          <div class="resume-section">
+            <h4 class="resume-sec-title">ACHIEVEMENTS & CODING PROFILES</h4>
+            <ul>
+              <li>Solved 250+ algorithmic problems across LeetCode, HackerRank, and GeeksforGeeks.</li>
+              <li>5-Star Gold Badge in Java & C on HackerRank.</li>
+              <li>Consistent participant in campus coding workshops and technical paper presentations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#hero" class="footer-brand">
+          <span class="brand-bracket">&lt;</span>Deepika Pal<span class="brand-bracket">/&gt;</span>
+        </a>
+        <p>Building high-performance software with strong algorithmic foundations.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Deepika Pal. All rights reserved. Designed for Placement Excellence.</p>
+        <div class="footer-back-to-top">
+          <a href="#hero" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i> Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
